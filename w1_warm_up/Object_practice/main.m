@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
         [ls NXDisplayAllFilesAtPath:@"/Users/eunjooim/Dropbox/garam/design" filterByExtension:@"png"];
         
         // NXPrintDirectory class method
-        [NXPrintDirectory NXDisplayAllFilesAtPath:@"/Users/eunjooim/Dropbox/garam/design" filterByExtension:@"png"];
+//        [NXPrintDirectory NXDisplayAllFilesAtPath:@"/Users/eunjooim/Dropbox/garam/design" filterByExtension:@"png"];
     }
     
     return 0;

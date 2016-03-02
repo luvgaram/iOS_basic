@@ -36,7 +36,7 @@ NSDirectoryEnumerator *directoryEnumerator;
     directoryEnumerator = [fileManager enumeratorAtPath:path];
     NSLog(@"--- %@ ---", path);
     while ((path = [directoryEnumerator nextObject]) != nil) {
-        if ([path hasSuffix:extension]) {
+        if ([[path pathExtension] isEqualToString: extension]) {
             NSLog(@"%@",path);
         }
     }
