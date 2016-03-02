@@ -2,4 +2,4 @@
 
 | week | date | detail | 
 |-------------| ------------------- | ------------------ |
-| week 1 | 2016.3.2 | [warm up - Object practive](https://github.com/luvgaram/iOS_basic/tree/master/w1_warm_up) |
+| week 1 | 2016.3.2 11:59 | [warm up - Object practive](https://github.com/luvgaram/iOS_basic/tree/master/w1_warm_up) |
