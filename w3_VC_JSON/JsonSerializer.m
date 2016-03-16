@@ -14,6 +14,21 @@
 
 NSData *data;
 
+- (NSString*)getStringFromJson:(NSString*)fileName {
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *filePath = [mainBundle pathForResource:fileName ofType:@"json"];
+
+    NSError *error;
+    NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+    
+    if (error)
+        NSLog(@"Error reading file: %@", error.localizedDescription);
+    
+    NSLog (@"%@", fileContents);
+    
+    return fileContents;
+}
+
 - (NSArray *)serializeToArray:(NSString*)json {
     NSMutableArray *resultArray = [[NSMutableArray alloc]init];
     

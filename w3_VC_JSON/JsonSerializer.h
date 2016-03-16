@@ -10,6 +10,7 @@
 
 @interface JsonSerializer : NSObject
 
+- (NSString*)getStringFromJson:(NSString*)fileName;
 - (NSArray *)serializeToArray:(NSString*)json;
 
 @end

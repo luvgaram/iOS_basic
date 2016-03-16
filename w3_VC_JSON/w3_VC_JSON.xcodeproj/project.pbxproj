@@ -24,6 +24,7 @@
 		A84F0B051C99039500501376 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84F0B011C99039500501376 /* 02.jpg */; };
 		A84F0B061C99039500501376 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84F0B021C99039500501376 /* 03.jpg */; };
 		A84F0B071C99039500501376 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84F0B031C99039500501376 /* 04.jpg */; };
+		A84F0B091C990B1000501376 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A84F0B081C990B1000501376 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		A84F0B011C99039500501376 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
 		A84F0B021C99039500501376 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
 		A84F0B031C99039500501376 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		A84F0B081C990B1000501376 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				A84F0AFF1C99037A00501376 /* images */,
 				A84F0AF01C98EC6A00501376 /* JsonSerializer.h */,
+				A84F0B081C990B1000501376 /* data.json */,
 				A84F0AF11C98EC6A00501376 /* JsonSerializer.m */,
 				A84F0ACB1C98E95700501376 /* AppDelegate.h */,
 				A84F0ACC1C98E95700501376 /* AppDelegate.m */,
@@ -244,6 +247,7 @@
 				A84F0B061C99039500501376 /* 03.jpg in Resources */,
 				A84F0B051C99039500501376 /* 02.jpg in Resources */,
 				A84F0ADB1C98E95700501376 /* LaunchScreen.storyboard in Resources */,
+				A84F0B091C990B1000501376 /* data.json in Resources */,
 				A84F0AD81C98E95700501376 /* Assets.xcassets in Resources */,
 				A84F0B071C99039500501376 /* 04.jpg in Resources */,
 				A84F0B041C99039500501376 /* 01.jpg in Resources */,
