@@ -7,4 +7,5 @@
 | week 3-1 | 2016.3.14 13:30 | [MVC](https://github.com/luvgaram/iOS_basic/tree/master/w3_MVC) |
 | ㄴ | 2016.3.16 08:30 | ㄴ change temp label for namelist to alert  |
 | week 3-2 | 2016.3.16 12:40 | [VC * JSON](https://github.com/luvgaram/iOS_basic/tree/master/w3_VC_JSON) |
+| week 4-1 | 2016.3.21 13:30 | [Custom View](https://github.com/luvgaram/iOS_basic/tree/master/w4_view) |
 
