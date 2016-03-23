@@ -9,4 +9,4 @@
 | week 3-2 | 2016.3.16 12:40 | [VC * JSON](https://github.com/luvgaram/iOS_basic/tree/master/w3_VC_JSON) |
 | week 4-1 | 2016.3.21 13:30 | [Custom View](https://github.com/luvgaram/iOS_basic/tree/master/w4_view) |
 | week 4-2 | 2016.3.23 11:55 | [GO View](https://github.com/luvgaram/iOS_basic/tree/master/w4_go_view) |
-
+| ㄴ | 2016.3.23 14:10 | ㄴ #2 Bar Graph and temp location for a stone |
