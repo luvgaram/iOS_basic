@@ -10,6 +10,8 @@
 
 @interface CardView : UIView
 
-@property (assign) NSArray *cardDeck;
+//@property (assign) NSArray *cardDeck;
+
+//- (void)addSubview:(UIView *)view CardName:(NSString *)cardName PosX:(int)x PosY:(int)y;
 
 @end

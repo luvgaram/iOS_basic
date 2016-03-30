@@ -12,4 +12,4 @@
 | ㄴ | 2016.3.23 14:10 | ㄴ #2 Bar Graph and temp location for a stone |
 | week 5 | 2016.3.30 12:30 | [GO View](https://github.com/luvgaram/iOS_basic/tree/master/w5_card) |
 | ㄴ | 2016.3.30 13:10 | ㄴ #2 draw card deck 0~6 and start memory management |
-| ㄴ | 2016.3.30 21:40 | ㄴ #3 seperate card model |
+| ㄴ | 2016.3.30 23:20 | ㄴ #3 seperate card model & apply addView |

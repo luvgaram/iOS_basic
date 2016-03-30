@@ -28,7 +28,7 @@ NSArray *cardNumberArray;
 }
 
 - (NSString*)cardName {
-    NSLog(@"%@", cardName);
+//    NSLog(@"%@", cardName);
     return cardName;
 }
 

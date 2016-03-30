@@ -77,7 +77,7 @@ NSMutableArray *shuffled;
         NXCard *newCard = [[NXCard alloc]initWithType:intForCardType Number:intForCardNum];
         NSString *cardName = [newCard cardName];
         
-        NSLog(@"@now %d : %d, %d", i++, intForCardNum, intForCardType);
+//        NSLog(@"@now %d : %d, %d", i++, intForCardNum, intForCardType);
         [listedCardDeck addObject:cardName];
         [newCard release];
     }
