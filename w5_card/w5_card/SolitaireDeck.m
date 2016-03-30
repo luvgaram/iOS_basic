@@ -62,6 +62,15 @@ NSMutableArray *shuffled;
     [shuffled addObject:deck6];
     [shuffled addObject:deck7];
     
+    [deck0 release];
+    [deck1 release];
+    [deck2 release];
+    [deck3 release];
+    [deck4 release];
+    [deck5 release];
+    [deck6 release];
+    [deck7 release];
+    
     return shuffled;
 }
 
@@ -78,6 +87,8 @@ NSMutableArray *shuffled;
                                [cardType objectAtIndex:intForCardType],
                                [cardNumber objectAtIndex:intForCardNum]];
         [listedCardDeck addObject:cardName];
+        
+        [cardName release];
         
 //        NSLog(@"%d : %d, %d = %@", intNum, intForCardType, intForCardNum, cardName);
     }
@@ -98,8 +109,6 @@ NSMutableArray *shuffled;
 }
 
 
-
-// http://stackoverflow.com/questions/8050681/generating-unique-random-number-in-objective-c
 -(NSArray *)randomUniqueNumberArrayFrom:(int)rangeLow to:(int)rangeHigh{
     NSMutableArray *randomArray = [[NSMutableArray alloc] init];
     int randNum = arc4random() % (rangeHigh-rangeLow+1) + rangeLow;
@@ -113,9 +122,7 @@ NSMutableArray *shuffled;
         }
         
     }
-//    NSLog(@"UNIQUE ARRAY %@",randomArray);
-    return randomArray;
-    
+    return [randomArray autorelease];
 }
 
 @end
