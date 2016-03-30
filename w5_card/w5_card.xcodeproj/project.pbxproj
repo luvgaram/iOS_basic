@@ -68,6 +68,7 @@
 		A8B9D13A1CAB5F05005EABA4 /* sQ.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B9D1061CAB5F05005EABA4 /* sQ.png */; };
 		A8B9D13D1CAB6074005EABA4 /* SolitaireDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B9D13C1CAB6074005EABA4 /* SolitaireDeck.m */; };
 		A8D2A7C81CAB77DC0094699B /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D2A7C71CAB77DC0094699B /* CardView.m */; };
+		A8D2A7CE1CABDD500094699B /* NXCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D2A7CD1CABDD500094699B /* NXCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		A8B9D13C1CAB6074005EABA4 /* SolitaireDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolitaireDeck.m; sourceTree = "<group>"; };
 		A8D2A7C61CAB77DC0094699B /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		A8D2A7C71CAB77DC0094699B /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		A8D2A7CC1CABDD500094699B /* NXCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXCard.h; sourceTree = "<group>"; };
+		A8D2A7CD1CABDD500094699B /* NXCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 				A8B9D13C1CAB6074005EABA4 /* SolitaireDeck.m */,
 				A8D2A7C61CAB77DC0094699B /* CardView.h */,
 				A8D2A7C71CAB77DC0094699B /* CardView.m */,
+				A8D2A7CC1CABDD500094699B /* NXCard.h */,
+				A8D2A7CD1CABDD500094699B /* NXCard.m */,
 			);
 			path = w5_card;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B9D0B51CAB5EAA005EABA4 /* ViewController.m in Sources */,
+				A8D2A7CE1CABDD500094699B /* NXCard.m in Sources */,
 				A8B9D13D1CAB6074005EABA4 /* SolitaireDeck.m in Sources */,
 				A8D2A7C81CAB77DC0094699B /* CardView.m in Sources */,
 				A8B9D0B21CAB5EAA005EABA4 /* AppDelegate.m in Sources */,

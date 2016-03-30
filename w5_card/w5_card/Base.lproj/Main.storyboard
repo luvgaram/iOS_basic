@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fs6-uh-W5g">
-                                <rect key="frame" x="20" y="20" width="99" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fs6-uh-W5g">
+                                <rect key="frame" x="20" y="20" width="121" height="30"/>
                                 <state key="normal" title="Refresh"/>
                                 <connections>
                                     <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AA1-1H-wX9"/>
@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="Fs6-uh-W5g" secondAttribute="leading" id="G0A-gr-3nd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fs6-uh-W5g" secondAttribute="trailing" constant="938" id="OgM-Ew-80M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fs6-uh-W5g" secondAttribute="trailing" constant="863" id="cFr-il-JId"/>
                             <constraint firstItem="Fs6-uh-W5g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iJn-6V-oTB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fs6-uh-W5g" secondAttribute="bottom" constant="718" id="jJe-TB-u6W"/>
                         </constraints>

@@ -7,24 +7,12 @@
 //
 
 #import "SolitaireDeck.h"
+#import "NXCard.h"
 
 @implementation SolitaireDeck
 
-NSArray *cardType;
-NSArray *cardNumber;
 NSMutableArray *listedCardDeck;
 NSMutableArray *shuffled;
-
-- (id) init {
-    self = [super init];
-    
-    if (self) {
-        cardType = [NSArray arrayWithObjects:@"c", @"d", @"h", @"s", nil];
-        cardNumber = [NSArray arrayWithObjects:@"A", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"J", @"Q", @"K", nil];
-    }
-    return self;
-
-}
 
 
 - (NSArray *) shuffleCards {
@@ -78,20 +66,22 @@ NSMutableArray *shuffled;
     listedCardDeck = [[NSMutableArray alloc]init];
     NSArray *randomArray = [self randomUniqueNumberArrayFrom:0 to:51];
     
+    
+    int i = 0;
+    
     for (NSNumber *number in randomArray) {
         int intNum = [number intValue];
         int intForCardNum = (intNum) % 13;
         int intForCardType = floor((intNum) / 13);
+    
+        NXCard *newCard = [[NXCard alloc]initWithType:intForCardType Number:intForCardNum];
+        NSString *cardName = [newCard cardName];
         
-        NSString *cardName =  [NSString stringWithFormat:@"%@%@",
-                               [cardType objectAtIndex:intForCardType],
-                               [cardNumber objectAtIndex:intForCardNum]];
+        NSLog(@"@now %d : %d, %d", i++, intForCardNum, intForCardType);
         [listedCardDeck addObject:cardName];
-        
-        [cardName release];
-        
-//        NSLog(@"%d : %d, %d = %@", intNum, intForCardType, intForCardNum, cardName);
+        [newCard release];
     }
+
 }
 
 - (int) addCardsToTargetDeck:(NSMutableArray*)targetDeck cardAtIndex:(int)cardAtIndex loopNum:(int)loop {
