@@ -15,7 +15,7 @@ NSMutableArray *listedCardDeck;
 NSMutableArray *shuffled;
 
 
-- (NSArray *) shuffleCards {
+-(NSArray *) shuffleCards {
     shuffled = [[NSMutableArray alloc] init];
 
     [self prepareCardDeckList];
@@ -62,12 +62,9 @@ NSMutableArray *shuffled;
     return shuffled;
 }
 
-- (void) prepareCardDeckList {
+-(void) prepareCardDeckList {
     listedCardDeck = [[NSMutableArray alloc]init];
     NSArray *randomArray = [self randomUniqueNumberArrayFrom:0 to:51];
-    
-    
-    int i = 0;
     
     for (NSNumber *number in randomArray) {
         int intNum = [number intValue];
@@ -76,23 +73,21 @@ NSMutableArray *shuffled;
     
         NXCard *newCard = [[NXCard alloc]initWithType:intForCardType Number:intForCardNum];
         NSString *cardName = [newCard cardName];
-        
-//        NSLog(@"@now %d : %d, %d", i++, intForCardNum, intForCardType);
-        [listedCardDeck addObject:cardName];
         [newCard release];
+        [listedCardDeck addObject:cardName];
     }
-
 }
 
-- (int) addCardsToTargetDeck:(NSMutableArray*)targetDeck cardAtIndex:(int)cardAtIndex loopNum:(int)loop {
+-(int) addCardsToTargetDeck:(NSMutableArray*)targetDeck cardAtIndex:(int)cardAtIndex loopNum:(int)loop {
     for (int i = 0; i < loop; i++ ) {
         [targetDeck addObject:[listedCardDeck objectAtIndex:cardAtIndex++]];
+        [[listedCardDeck objectAtIndex:cardAtIndex - 1] release];
     }
     
     return cardAtIndex;
 }
 
-- (void) displayCards {
+-(void) displayCards {
     for (NSArray *array in shuffled) {
         NSLog(@"%@", array);
     }

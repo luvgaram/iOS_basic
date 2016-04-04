@@ -8,25 +8,28 @@
 
 #import "ViewController.h"
 #import "SolitaireDeck.h"
-#import "CardView.h"
 
 @interface ViewController ()
 
 
-@property (retain, nonatomic) IBOutlet CardView *myCanvas;
+@property (retain, nonatomic) IBOutlet UIView *myCanvas;
 
 @end
 
 @implementation ViewController
 
+SolitaireDeck *newDeck;
 NSArray *shuffledDeck;
 int cardWidth = 130;
 int cardHeight = 150;
 
+
 - (IBAction)testButton:(id)sender {
     for (UIView *view in [_myCanvas subviews]) {
         if ([view isMemberOfClass:[UIImageView class]]) {
+            view = nil;
             [view removeFromSuperview];
+            [view release];
         }
     }
     [self addView];
@@ -35,11 +38,10 @@ int cardHeight = 150;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:true];
     [self addView];
-//    [self addChildViewController:self];
 }
 
 - (void)addView {
-    SolitaireDeck *newDeck = [[SolitaireDeck alloc] init];
+    newDeck = [[SolitaireDeck alloc] init];
     shuffledDeck = [newDeck shuffleCards];
     [shuffledDeck retain];
     
@@ -53,8 +55,8 @@ int cardHeight = 150;
     
     [self drawCardAtLastDeck:[shuffledDeck objectAtIndex:7] startPosX:26 startPosY:500];
     
-    [newDeck release];
     [shuffledDeck release];
+    [newDeck release];
 }
 
 - (UIImage *)makeCardImageView:(NSString *)cardName {
@@ -77,10 +79,9 @@ int cardHeight = 150;
     [cardImage setFrame:CGRectMake(startPosX, startPosY, cardWidth, cardHeight)];
     
     [_myCanvas addSubview:cardImage];
-    
-//    [cardImage release];
+   
     [image release];
-    
+    [cardImage release];   
 }
 
 
@@ -94,7 +95,6 @@ int cardHeight = 150;
 }
 
 - (void)drawCardAtLastDeck:(NSArray *)cardDeck startPosX:(int)startPosX startPosY:(int)startPosY {
-    
     for (int i = 0; i < 24; i++) {
         [self addImageView:[cardDeck objectAtIndex:i] startPosX:startPosX startPosY:startPosY];
         
