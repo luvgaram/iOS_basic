@@ -23,7 +23,6 @@ NSArray *shuffledDeck;
 int cardWidth = 130;
 int cardHeight = 150;
 
-
 - (IBAction)testButton:(id)sender {
     for (UIView *view in [_myCanvas subviews]) {
         if ([view isMemberOfClass:[UIImageView class]]) {
@@ -35,15 +34,46 @@ int cardHeight = 150;
     [self addView];
 }
 
+- (void)saveCardDeck:(NSNotification*)notification {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *fileName = [NSString stringWithFormat:@"%@%@",paths[0], @"/deck.plist"];
+    NSLog(@"saved deck: %@", shuffledDeck);
+    [shuffledDeck writeToFile:fileName atomically:YES];
+
+}
+
+- (void)getCardDeck:(NSNotification*)notification {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *fileName = [NSString stringWithFormat:@"%@%@",paths[0], @"/deck.plist"];
+    
+    if (!shuffledDeck) {
+        NSLog(@"get deck from plist");
+        shuffledDeck = [[NSArray alloc] initWithContentsOfFile:fileName];
+    }
+    
+    NSLog(@"deck from plist: %@", shuffledDeck);
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:true];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveCardDeck:) name:@"saveDeck" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getCardDeck:) name:@"getDeck" object:nil];
+    
     [self addView];
 }
 
 - (void)addView {
     newDeck = [[SolitaireDeck alloc] init];
-    shuffledDeck = [newDeck shuffleCards];
-    [shuffledDeck retain];
+    
+    NSLog(@"addView: %@", shuffledDeck);
+    
+    if (!shuffledDeck) {
+        newDeck = [[SolitaireDeck alloc] init];
+        shuffledDeck = [newDeck shuffleCards];
+//        [shuffledDeck retain];
+    };
+    
+    NSLog(@"addedView: %@", shuffledDeck);
     
     int startX = 26;
     int startY = 100;
@@ -55,8 +85,8 @@ int cardHeight = 150;
     
     [self drawCardAtLastDeck:[shuffledDeck objectAtIndex:7] startPosX:26 startPosY:500];
     
-    [shuffledDeck release];
-    [newDeck release];
+//    [shuffledDeck release];
+//    [newDeck release];
 }
 
 - (UIImage *)makeCardImageView:(NSString *)cardName {
@@ -66,6 +96,8 @@ int cardHeight = 150;
 - (void)drawDeck:(NSArray *)cardDeck index:(int)index startX:(int)startX startY:(int)startY number:(int)number {
     
     NSArray *deck = [cardDeck objectAtIndex:index];
+    [deck retain];
+    
     [self drawCardAtDeck:deck startPosX:startX startPosY:startY startIndex:0 number:number];
     
     [deck release];
@@ -104,7 +136,7 @@ int cardHeight = 150;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 - (void)didReceiveMemoryWarning {
