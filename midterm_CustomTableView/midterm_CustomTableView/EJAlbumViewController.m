@@ -55,8 +55,20 @@ BOOL hasHeader;
 #pragma mark - tableViewDetail
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    EJData *data;
     
-    EJData *data = self.dataModel.itemArray[indexPath.row];
+    if (hasHeader) {
+        NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
+        NSArray *sortedKeys =  [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        
+        NSLog(@"%@", sortedKeys);
+        
+        NSString *key = sortedKeys[indexPath.section];
+        NSArray *dataArray = [self.dataModel.itemDictionary objectForKey:key];
+        data = [dataArray objectAtIndex:(int)indexPath.row];
+    } else {
+        data = self.dataModel.itemArray[indexPath.row];
+    }
     EJDetailViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
     [controller setDetailItem:data];
     controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
@@ -80,7 +92,9 @@ BOOL hasHeader;
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (hasHeader) {
         NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
-        return allKeys[section];
+        NSArray *sortedKeys = [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+     
+        return sortedKeys[section];
     }
     
     return NULL;
@@ -90,7 +104,7 @@ BOOL hasHeader;
     
     if (hasHeader) {
         NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
-        NSArray *sortedKeys =  [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        NSArray *sortedKeys = [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
         
         NSString *key = sortedKeys[section];
         
@@ -114,6 +128,8 @@ BOOL hasHeader;
     if (hasHeader) {
         NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
         NSArray *sortedKeys =  [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        
+        NSLog(@"%@", sortedKeys);
         
         NSString *key = sortedKeys[indexPath.section];
         NSArray *dataArray = [self.dataModel.itemDictionary objectForKey:key];
