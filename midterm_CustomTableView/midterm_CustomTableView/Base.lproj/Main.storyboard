@@ -79,7 +79,7 @@
                             <constraint firstItem="yv0-f6-Dkw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="iin-5Z-NfP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ddc-FH-HZI"/>
+                    <navigationItem key="navigationItem" title="Album" id="Ddc-FH-HZI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="yv0-f6-Dkw" id="mVd-Vc-Dkz"/>
