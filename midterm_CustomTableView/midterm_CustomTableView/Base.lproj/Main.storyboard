@@ -39,7 +39,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-H4-r0f">
-                                                    <rect key="frame" x="251" y="44" width="42" height="21"/>
+                                                    <rect key="frame" x="195" y="44" width="98" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -51,8 +51,8 @@
                                             <constraint firstItem="WGy-xE-Ul3" firstAttribute="height" secondItem="9dT-nJ-WxM" secondAttribute="height" id="DfE-Bd-nzT"/>
                                             <constraint firstItem="ggD-H4-r0f" firstAttribute="top" secondItem="9dT-nJ-WxM" secondAttribute="top" constant="44" id="DyC-ej-K74"/>
                                             <constraint firstAttribute="trailing" secondItem="ggD-H4-r0f" secondAttribute="trailing" constant="27" id="H6c-3A-Yx0"/>
-                                            <constraint firstItem="ggD-H4-r0f" firstAttribute="leading" secondItem="9dT-nJ-WxM" secondAttribute="leading" constant="251" id="LAv-AA-Ega"/>
                                             <constraint firstItem="WGy-xE-Ul3" firstAttribute="leading" secondItem="9dT-nJ-WxM" secondAttribute="leading" id="Nye-lM-eyq"/>
+                                            <constraint firstItem="ggD-H4-r0f" firstAttribute="leading" secondItem="9dT-nJ-WxM" secondAttribute="leading" constant="195" id="ROB-k4-0me"/>
                                             <constraint firstAttribute="trailing" secondItem="WGy-xE-Ul3" secondAttribute="trailing" id="Xfl-yd-SdA"/>
                                             <constraint firstAttribute="bottom" secondItem="G9n-th-oPb" secondAttribute="bottom" constant="39" id="aF1-ez-u9J"/>
                                             <constraint firstItem="WGy-xE-Ul3" firstAttribute="top" secondItem="9dT-nJ-WxM" secondAttribute="top" id="gVe-df-E27"/>
