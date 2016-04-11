@@ -49,7 +49,6 @@ BOOL hasHeader;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - tableViewDetail
@@ -58,8 +57,7 @@ BOOL hasHeader;
     EJData *data;
     
     if (hasHeader) {
-        NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
-        NSArray *sortedKeys =  [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        NSArray *sortedKeys = [self shortedKeys];
         
         NSLog(@"%@", sortedKeys);
         
@@ -85,15 +83,16 @@ BOOL hasHeader;
         NSLog(@"[self.dataModel.itemDictionary count]: %d", [self.dataModel.itemDictionary count]);
         return [self.dataModel.itemDictionary count];
     }
-//    else
-        return 1;
+    else return 1;
+
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (hasHeader) {
-        NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
-        NSArray *sortedKeys = [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-     
+
+        
+        NSArray *sortedKeys = [self shortedKeys];
+        
         return sortedKeys[section];
     }
     
@@ -103,8 +102,7 @@ BOOL hasHeader;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if (hasHeader) {
-        NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
-        NSArray *sortedKeys = [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        NSArray *sortedKeys = [self shortedKeys];
         
         NSString *key = sortedKeys[section];
         
@@ -126,8 +124,7 @@ BOOL hasHeader;
     EJData *object;
     
     if (hasHeader) {
-        NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
-        NSArray *sortedKeys =  [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        NSArray *sortedKeys = [self shortedKeys];
         
         NSLog(@"%@", sortedKeys);
         
@@ -149,7 +146,6 @@ BOOL hasHeader;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
     return YES;
 }
 
@@ -158,7 +154,6 @@ BOOL hasHeader;
         [self.dataModel.itemArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
 
@@ -174,6 +169,13 @@ BOOL hasHeader;
         hasHeader = NO;
         [self.dataModel initializeData];
     }
+}
+
+#pragma mark - for Dictionary
+
+- (NSArray *)shortedKeys {
+    NSArray *allKeys = [self.dataModel.itemDictionary allKeys];
+    return [allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 @end
