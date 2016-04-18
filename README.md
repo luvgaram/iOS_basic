@@ -16,3 +16,4 @@
 | week 6-1 | 2016.4.4 13:00 | [Dynamic Behaviour](https://github.com/luvgaram/iOS_basic/tree/master/w6_dynamic_behaviour) |
 | week 6-2 | 2016.4.6 12:45 | [Card view](https://github.com/luvgaram/iOS_basic/tree/master/w5_card)  |
 | week 7 | 2016.4.11 13:00 | [MidTerm - custom view](https://github.com/luvgaram/iOS_basic/tree/master/midterm_CustomTableView) |
+| ㄴ week 8-1 | 2016.4.18 14:20 | ㄴ #2 Network Programming |

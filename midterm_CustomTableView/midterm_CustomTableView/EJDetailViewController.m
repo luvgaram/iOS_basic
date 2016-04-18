@@ -38,7 +38,8 @@
         self.detailTitle.text = [self.data title];
         
         NSLog(@"title: %@", [self.data title]);
-        self.detailImage.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[self.data.image substringToIndex : 2] ofType:@"jpg"]];
+//        self.detailImage.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[self.data.image substringToIndex : 2] ofType:@"jpg"]];
+        self.detailImage.image = [UIImage imageWithData:[self.data image]];
         self.detailDate.text = [self.data date];
     }
 }

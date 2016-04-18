@@ -40,6 +40,7 @@
 		A89ABCF41CBB324E0097277F /* EJAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A89ABCF31CBB324E0097277F /* EJAlbumViewController.m */; };
 		A89ABCF71CBB328C0097277F /* EJDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A89ABCF61CBB328C0097277F /* EJDetailViewController.m */; };
 		A89ABCFA1CBB32BC0097277F /* EJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A89ABCF91CBB32BC0097277F /* EJTableViewCell.m */; };
+		A8C5250F1CC48C6A004B752C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C5250E1CC48C6A004B752C /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		A89ABCF61CBB328C0097277F /* EJDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJDetailViewController.m; sourceTree = "<group>"; };
 		A89ABCF81CBB32BC0097277F /* EJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJTableViewCell.h; sourceTree = "<group>"; };
 		A89ABCF91CBB32BC0097277F /* EJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJTableViewCell.m; sourceTree = "<group>"; };
+		A8C5250D1CC48C6A004B752C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A8C5250E1CC48C6A004B752C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				A89ABCA51CBB2FA60097277F /* LaunchScreen.storyboard */,
 				A89ABCA81CBB2FA60097277F /* Info.plist */,
 				A89ABC971CBB2FA60097277F /* Supporting Files */,
+				A8C5250D1CC48C6A004B752C /* Reachability.h */,
+				A8C5250E1CC48C6A004B752C /* Reachability.m */,
 				A89ABCEC1CBB304F0097277F /* EJDataModel.h */,
 				A89ABCED1CBB304F0097277F /* EJDataModel.m */,
 				A89ABCEF1CBB30A20097277F /* EJData.h */,
@@ -255,6 +260,7 @@
 				TargetAttributes = {
 					A89ABC931CBB2FA60097277F = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 39WT95YDMW;
 					};
 					A89ABCAC1CBB2FA70097277F = {
 						CreatedOnToolsVersion = 7.3;
@@ -330,6 +336,7 @@
 			files = (
 				A89ABCF71CBB328C0097277F /* EJDetailViewController.m in Sources */,
 				A89ABCF41CBB324E0097277F /* EJAlbumViewController.m in Sources */,
+				A8C5250F1CC48C6A004B752C /* Reachability.m in Sources */,
 				A89ABC9C1CBB2FA60097277F /* AppDelegate.m in Sources */,
 				A89ABCEE1CBB304F0097277F /* EJDataModel.m in Sources */,
 				A89ABCFA1CBB32BC0097277F /* EJTableViewCell.m in Sources */,
@@ -462,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = midterm_CustomTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.midterm-CustomTableView";
@@ -473,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = midterm_CustomTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.midterm-CustomTableView";
@@ -521,6 +530,7 @@
 				A89ABCB81CBB2FA70097277F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A89ABCB91CBB2FA70097277F /* Build configuration list for PBXNativeTarget "midterm_CustomTableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +539,7 @@
 				A89ABCBB1CBB2FA70097277F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

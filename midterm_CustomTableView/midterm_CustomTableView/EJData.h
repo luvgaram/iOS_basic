@@ -11,9 +11,10 @@
 @interface EJData : NSObject
 
 @property NSString *title;
-@property NSString *image;
+//@property NSString *image;
+@property NSData *image;
 @property NSString *date;
 
-- (id)initWithTitle:(NSString *)title image:(NSString *)image date:(NSString *)date;
+- (id)initWithTitle:(NSString *)title image:(NSData *)image date:(NSString *)date;
 
 @end

@@ -8,17 +8,34 @@
 
 #import "EJDataModel.h"
 #import "EJData.h"
+#import "Reachability.h"
 
 @implementation EJDataModel
 
     char *data = "[{\"title\":\"초록\",\"image\":\"01.jpg\",\"date\":\"20150116\"},\ {\"title\":\"장미\",\"image\":\"02.jpg\",\"date\":\"20160505\"},\ {\"title\":\"낙엽\",\"image\":\"03.jpg\",\"date\":\"20141212\"},\ {\"title\":\"계단\",\"image\":\"04.jpg\",\"date\":\"20140301\"},\ {\"title\":\"벽돌\",\"image\":\"05.jpg\",\"date\":\"20150101\"},\ {\"title\":\"바다\",\"image\":\"06.jpg\",\"date\":\"20150707\"},\ {\"title\":\"벌레\",\"image\":\"07.jpg\",\"date\":\"20140815\"},\ {\"title\":\"나무\",\"image\":\"08.jpg\",\"date\":\"20161231\"},\ {\"title\":\"흑백\",\"image\":\"09.jpg\",\"date\":\"20150102\"},\ {\"title\":\"나비\",\"image\":\"10.jpg\",\"date\":\"20141225\"}]";
+
+    NetworkStatus remoteHostStatus;
 
 - (id) init {
     self = [super init];
     
     if (self) {
         // JSON to itemArray
-        [self serializingJSON];
+        
+        Reachability *reachability = [Reachability reachabilityWithHostName:@"125.209.192.123"];
+        remoteHostStatus = [reachability currentReachabilityStatus];
+        
+        NSData *newData;
+        
+        if (remoteHostStatus == NotReachable) {
+            NSLog(@"reachbility: NotReachable");
+            newData = [self getJsonFromChar];
+        } else {
+            NSLog(@"reachbility: Reachable");
+            newData = [self getJsonFromURL];
+        }
+        
+        [self serializingJSON:newData];
         
         // sort with title
         [self initializeData];
@@ -27,18 +44,47 @@
     return self;
 }
 
-- (void) serializingJSON {
+- (NSData *)getJsonFromURL {
+    NSString *urlString = @"http://125.209.194.123/json.php";
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    return data;
+}
+
+- (NSData *)getJsonFromChar {
     NSString *fileContents = [NSString stringWithUTF8String:data];
-    NSData *newData = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
-    
+    return [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+}
+- (void) serializingJSON:(NSData *)newData{
     self.itemArray = [[NSMutableArray alloc] init];
     
     NSArray *stringArray = [NSJSONSerialization JSONObjectWithData:newData options:0 error:nil];
     
     for (NSDictionary *rawDic in stringArray) {
+//        EJData *newData = [[EJData alloc]initWithTitle:[rawDic objectForKey:@"title"]
+//                                                 image:[rawDic objectForKey:@"image"]
+//                                                  date:[rawDic objectForKey:@"date"]];
+        NSData *image;
+        NSString *imageName = [rawDic objectForKey:@"image"];
+        
+        if (remoteHostStatus == NotReachable) {
+            NSLog(@"isReachable: NO");
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:[imageName substringToIndex : 2] ofType:@"jpg"];
+            image = [NSData dataWithContentsOfFile:filePath];
+        } else {
+            NSLog(@"isReachable: YES");
+            NSString *urlString = [NSString stringWithFormat:@"http://125.209.194.123/demo/%@", imageName];
+            NSURL *url = [NSURL URLWithString:urlString];
+            image = [[NSData alloc] initWithContentsOfURL:url];
+        }
+        
         EJData *newData = [[EJData alloc]initWithTitle:[rawDic objectForKey:@"title"]
-                                                 image:[rawDic objectForKey:@"image"]
+                                                 image:image
                                                   date:[rawDic objectForKey:@"date"]];
+        
         [self.itemArray addObject: newData];
     }
     

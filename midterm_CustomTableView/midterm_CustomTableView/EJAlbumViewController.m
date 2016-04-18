@@ -12,9 +12,10 @@
 #import "EJTableViewCell.h"
 #import "EJDetailViewController.h"
 
-@interface EJAlbumViewController ()
+@interface EJAlbumViewController () <NSURLConnectionDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property EJDataModel *dataModel;
+
 @end
 
 @implementation EJAlbumViewController
@@ -22,6 +23,7 @@
 #pragma mark - initializing
 
 BOOL hasHeader;
+NSMutableData *imageData;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +38,22 @@ BOOL hasHeader;
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTable)];
     self.navigationItem.rightBarButtonItem = refreshButton;
     hasHeader = NO;
+    
+    imageData = [[NSMutableData alloc] initWithCapacity:10];
+    NSString *url = @"http://125.209.194.123/demo/Image_100.jpg";
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    NSURLConnection* connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [connection start];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(nonnull NSData *)data {
+    //MTU 데이터 나눠받을 때마다
+    [imageData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    //전체 다 받은 이후
+    UIImage *image = [UIImage imageWithData:imageData];
 }
 
 - (void)receivedNotification:(NSNotification*)notification {
@@ -135,8 +153,9 @@ BOOL hasHeader;
         object = [self.dataModel.itemArray objectAtIndex:(int)indexPath.row];
     }
     
-    cell.backgroundImage.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[object.image substringToIndex : 2] ofType:@"jpg"]];
+    cell.backgroundImage.image = [UIImage imageWithData:object.image];
     cell.backgroundImage.contentMode = UIViewContentModeCenter;
+    
     cell.titleLabel.text = object.title;
     cell.detailLabel.text = object.date;
     

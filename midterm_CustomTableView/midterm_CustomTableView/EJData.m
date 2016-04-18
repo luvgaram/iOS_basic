@@ -10,7 +10,7 @@
 
 @implementation EJData
 
-- (id)initWithTitle:(NSString *)title image:(NSString *)image date:(NSString *)date {
+- (id)initWithTitle:(NSString *)title image:(NSData *)image date:(NSString *)date {
     self = [super init];
     
     if (self) {
