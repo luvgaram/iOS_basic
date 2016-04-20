@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A86402CB1CC70DEE004A3B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A86402CA1CC70DEE004A3B27 /* main.m */; };
+		A86402CE1CC70DEE004A3B27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A86402CD1CC70DEE004A3B27 /* AppDelegate.m */; };
+		A86402D11CC70DEE004A3B27 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86402D01CC70DEE004A3B27 /* MasterViewController.m */; };
+		A86402D41CC70DEE004A3B27 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86402D31CC70DEE004A3B27 /* DetailViewController.m */; };
+		A86402D71CC70DEE004A3B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86402D51CC70DEE004A3B27 /* Main.storyboard */; };
+		A86402D91CC70DEE004A3B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86402D81CC70DEE004A3B27 /* Assets.xcassets */; };
+		A86402DC1CC70DEE004A3B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86402DA1CC70DEE004A3B27 /* LaunchScreen.storyboard */; };
+		A86402E71CC70DEF004A3B27 /* w8_CFStreamSocketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A86402E61CC70DEF004A3B27 /* w8_CFStreamSocketUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A86402E31CC70DEF004A3B27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A86402BE1CC70DEE004A3B27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A86402C51CC70DEE004A3B27;
+			remoteInfo = w8_CFStreamSocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A86402C61CC70DEE004A3B27 /* w8_CFStreamSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w8_CFStreamSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86402CA1CC70DEE004A3B27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A86402CC1CC70DEE004A3B27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A86402CD1CC70DEE004A3B27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A86402CF1CC70DEE004A3B27 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		A86402D01CC70DEE004A3B27 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		A86402D21CC70DEE004A3B27 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A86402D31CC70DEE004A3B27 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A86402D61CC70DEE004A3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A86402D81CC70DEE004A3B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A86402DB1CC70DEE004A3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A86402DD1CC70DEE004A3B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A86402E21CC70DEF004A3B27 /* w8_CFStreamSocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w8_CFStreamSocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86402E61CC70DEF004A3B27 /* w8_CFStreamSocketUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w8_CFStreamSocketUITests.m; sourceTree = "<group>"; };
+		A86402E81CC70DEF004A3B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A86402C31CC70DEE004A3B27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A86402DF1CC70DEF004A3B27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A86402BD1CC70DEE004A3B27 = {
+			isa = PBXGroup;
+			children = (
+				A86402C81CC70DEE004A3B27 /* w8_CFStreamSocket */,
+				A86402E51CC70DEF004A3B27 /* w8_CFStreamSocketUITests */,
+				A86402C71CC70DEE004A3B27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A86402C71CC70DEE004A3B27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A86402C61CC70DEE004A3B27 /* w8_CFStreamSocket.app */,
+				A86402E21CC70DEF004A3B27 /* w8_CFStreamSocketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A86402C81CC70DEE004A3B27 /* w8_CFStreamSocket */ = {
+			isa = PBXGroup;
+			children = (
+				A86402CC1CC70DEE004A3B27 /* AppDelegate.h */,
+				A86402CD1CC70DEE004A3B27 /* AppDelegate.m */,
+				A86402CF1CC70DEE004A3B27 /* MasterViewController.h */,
+				A86402D01CC70DEE004A3B27 /* MasterViewController.m */,
+				A86402D21CC70DEE004A3B27 /* DetailViewController.h */,
+				A86402D31CC70DEE004A3B27 /* DetailViewController.m */,
+				A86402D51CC70DEE004A3B27 /* Main.storyboard */,
+				A86402D81CC70DEE004A3B27 /* Assets.xcassets */,
+				A86402DA1CC70DEE004A3B27 /* LaunchScreen.storyboard */,
+				A86402DD1CC70DEE004A3B27 /* Info.plist */,
+				A86402C91CC70DEE004A3B27 /* Supporting Files */,
+			);
+			path = w8_CFStreamSocket;
+			sourceTree = "<group>";
+		};
+		A86402C91CC70DEE004A3B27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A86402CA1CC70DEE004A3B27 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A86402E51CC70DEF004A3B27 /* w8_CFStreamSocketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A86402E61CC70DEF004A3B27 /* w8_CFStreamSocketUITests.m */,
+				A86402E81CC70DEF004A3B27 /* Info.plist */,
+			);
+			path = w8_CFStreamSocketUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A86402C51CC70DEE004A3B27 /* w8_CFStreamSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A86402EB1CC70DEF004A3B27 /* Build configuration list for PBXNativeTarget "w8_CFStreamSocket" */;
+			buildPhases = (
+				A86402C21CC70DEE004A3B27 /* Sources */,
+				A86402C31CC70DEE004A3B27 /* Frameworks */,
+				A86402C41CC70DEE004A3B27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = w8_CFStreamSocket;
+			productName = w8_CFStreamSocket;
+			productReference = A86402C61CC70DEE004A3B27 /* w8_CFStreamSocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A86402E11CC70DEF004A3B27 /* w8_CFStreamSocketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A86402EE1CC70DEF004A3B27 /* Build configuration list for PBXNativeTarget "w8_CFStreamSocketUITests" */;
+			buildPhases = (
+				A86402DE1CC70DEF004A3B27 /* Sources */,
+				A86402DF1CC70DEF004A3B27 /* Frameworks */,
+				A86402E01CC70DEF004A3B27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A86402E41CC70DEF004A3B27 /* PBXTargetDependency */,
+			);
+			name = w8_CFStreamSocketUITests;
+			productName = w8_CFStreamSocketUITests;
+			productReference = A86402E21CC70DEF004A3B27 /* w8_CFStreamSocketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A86402BE1CC70DEE004A3B27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jay Im";
+				TargetAttributes = {
+					A86402C51CC70DEE004A3B27 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					A86402E11CC70DEF004A3B27 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A86402C51CC70DEE004A3B27;
+					};
+				};
+			};
+			buildConfigurationList = A86402C11CC70DEE004A3B27 /* Build configuration list for PBXProject "w8_CFStreamSocket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A86402BD1CC70DEE004A3B27;
+			productRefGroup = A86402C71CC70DEE004A3B27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A86402C51CC70DEE004A3B27 /* w8_CFStreamSocket */,
+				A86402E11CC70DEF004A3B27 /* w8_CFStreamSocketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A86402C41CC70DEE004A3B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A86402DC1CC70DEE004A3B27 /* LaunchScreen.storyboard in Resources */,
+				A86402D91CC70DEE004A3B27 /* Assets.xcassets in Resources */,
+				A86402D71CC70DEE004A3B27 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A86402E01CC70DEF004A3B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A86402C21CC70DEE004A3B27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A86402CE1CC70DEE004A3B27 /* AppDelegate.m in Sources */,
+				A86402D11CC70DEE004A3B27 /* MasterViewController.m in Sources */,
+				A86402CB1CC70DEE004A3B27 /* main.m in Sources */,
+				A86402D41CC70DEE004A3B27 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A86402DE1CC70DEF004A3B27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A86402E71CC70DEF004A3B27 /* w8_CFStreamSocketUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A86402E41CC70DEF004A3B27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A86402C51CC70DEE004A3B27 /* w8_CFStreamSocket */;
+			targetProxy = A86402E31CC70DEF004A3B27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A86402D51CC70DEE004A3B27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A86402D61CC70DEE004A3B27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A86402DA1CC70DEE004A3B27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A86402DB1CC70DEE004A3B27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A86402E91CC70DEF004A3B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A86402EA1CC70DEF004A3B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A86402EC1CC70DEF004A3B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = w8_CFStreamSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w8-CFStreamSocket";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A86402ED1CC70DEF004A3B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = w8_CFStreamSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w8-CFStreamSocket";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A86402EF1CC70DEF004A3B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = w8_CFStreamSocketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w8-CFStreamSocketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = w8_CFStreamSocket;
+			};
+			name = Debug;
+		};
+		A86402F01CC70DEF004A3B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = w8_CFStreamSocketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w8-CFStreamSocketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = w8_CFStreamSocket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A86402C11CC70DEE004A3B27 /* Build configuration list for PBXProject "w8_CFStreamSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A86402E91CC70DEF004A3B27 /* Debug */,
+				A86402EA1CC70DEF004A3B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A86402EB1CC70DEF004A3B27 /* Build configuration list for PBXNativeTarget "w8_CFStreamSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A86402EC1CC70DEF004A3B27 /* Debug */,
+				A86402ED1CC70DEF004A3B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A86402EE1CC70DEF004A3B27 /* Build configuration list for PBXNativeTarget "w8_CFStreamSocketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A86402EF1CC70DEF004A3B27 /* Debug */,
+				A86402F01CC70DEF004A3B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A86402BE1CC70DEE004A3B27 /* Project object */;
+}
