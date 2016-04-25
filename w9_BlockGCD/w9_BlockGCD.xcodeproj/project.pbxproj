@@ -14,6 +14,7 @@
 		A864030A1CCDBD98004A3B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86403091CCDBD98004A3B27 /* Assets.xcassets */; };
 		A864030D1CCDBD98004A3B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A864030B1CCDBD98004A3B27 /* LaunchScreen.storyboard */; };
 		A86403181CCDBD98004A3B27 /* w9_BlockGCDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A86403171CCDBD98004A3B27 /* w9_BlockGCDUITests.m */; };
+		A86403231CCDCACB004A3B27 /* bookfile.txt in Resources */ = {isa = PBXBuildFile; fileRef = A86403221CCDCACB004A3B27 /* bookfile.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A86403131CCDBD98004A3B27 /* w9_BlockGCDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w9_BlockGCDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86403171CCDBD98004A3B27 /* w9_BlockGCDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w9_BlockGCDUITests.m; sourceTree = "<group>"; };
 		A86403191CCDBD98004A3B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A86403221CCDCACB004A3B27 /* bookfile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bookfile.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				A86403091CCDBD98004A3B27 /* Assets.xcassets */,
 				A864030B1CCDBD98004A3B27 /* LaunchScreen.storyboard */,
 				A864030E1CCDBD98004A3B27 /* Info.plist */,
+				A86403221CCDCACB004A3B27 /* bookfile.txt */,
 				A86402FD1CCDBD98004A3B27 /* Supporting Files */,
 			);
 			path = w9_BlockGCD;
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A864030D1CCDBD98004A3B27 /* LaunchScreen.storyboard in Resources */,
+				A86403231CCDCACB004A3B27 /* bookfile.txt in Resources */,
 				A864030A1CCDBD98004A3B27 /* Assets.xcassets in Resources */,
 				A86403081CCDBD98004A3B27 /* Main.storyboard in Resources */,
 			);

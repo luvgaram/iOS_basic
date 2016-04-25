@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonWidthConstraint;
 - (IBAction)buttonClicked:(id)sender;
+- (IBAction)bookButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
 
 @end
 
@@ -56,4 +58,34 @@
 //                         [self.view layoutIfNeeded];
                      }];
 }
+
+- (IBAction)bookButtonClicked:(id)sender {
+    _progressBar.progress = 0;
+//    dispatch_queue_t aQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t aQueue = dispatch_get_main_queue();
+    dispatch_async(aQueue, ^{
+        [self workingProgress];
+    });
+}
+
+-(void)workingProgress {
+    NSString *bookfile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]
+                                                             pathForResource:@"bookfile" ofType:@".txt"]  encoding:NSUTF8StringEncoding error:nil];
+    int length = bookfile.length;
+    int spaceCount = 0;
+    float progress = 0;
+    unichar aChar;
+    for (int nLoop=0; nLoop<length; nLoop++) {
+        aChar = [bookfile characterAtIndex:nLoop];
+        if (aChar==' ') spaceCount++;
+        progress = (float)nLoop / (float)length;
+        _progressBar.progress = progress;
+    }
+    [[[UIAlertView alloc] initWithTitle:@"완료"
+                                message:[NSString stringWithFormat:@"찾았다 %d개",spaceCount]
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil, nil] show];
+}
+      
 @end
