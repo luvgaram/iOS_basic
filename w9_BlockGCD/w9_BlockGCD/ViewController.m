@@ -188,31 +188,13 @@ NSString *bookfile;
 
 
 - (NSUInteger)countOfSubstring:(NSString *)substring atContents:(NSString *)contents {
-    // separate space
-    if ([[substring stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
-        NSLog (@"whitespace(s)");
-        NSUInteger numberOfOccurrences = [[contents componentsSeparatedByString:@" "] count] - 1;
-        
-        return numberOfOccurrences;
-    }
-    
-    NSRange subRange;
-    NSUInteger countOfSubstring = 0;
-    subRange = [contents rangeOfString:substring];
-    
-    while (subRange.location != NSNotFound) {
-    
-        NSRange newSubRange;
-        newSubRange.location = subRange.location + subRange.length;
-        newSubRange.length = contents.length - newSubRange.location;
-        
-        contents = [contents substringWithRange:newSubRange];
 
-        countOfSubstring++;
-        
-        subRange = [contents rangeOfString:substring];
-    }
     
-    return countOfSubstring;
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:substring options:NSRegularExpressionCaseInsensitive error:&error];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:contents options:0 range:NSMakeRange(0, [contents length])];
+    NSLog(@"Found %i", numberOfMatches);
+    
+    return numberOfMatches;
 }
 @end
