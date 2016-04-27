@@ -123,11 +123,25 @@ NSString *bookfile;
 - (IBAction)countButtonClicked:(id)sender {
     NSString *searchString = _searchTextField.text;
 
-    [self countOfSubstring:searchString atContents:bookfile];
+    NSInteger result = [self countOfSubstring:searchString atContents:bookfile];
+    [self showAlert:[NSString stringWithFormat:@"[%@] 검색 횟수: %d회 ", _searchTextField.text, result]];
     
 }
 
 - (IBAction)listCountButtonClicked:(id)sender {
+    [self countList];
+}
+
+- (void)showAlert:(NSString *) string {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"카운트 결과"
+                                                    message:string
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)countList {
     NSMutableArray *operationArray = [[NSMutableArray alloc] initWithCapacity:wordArray.count];
     NSMutableDictionary *wordCountDic = [[NSMutableDictionary alloc] initWithCapacity:wordArray.count];
     NSBlockOperation *myBlockOperation;
@@ -140,7 +154,7 @@ NSString *bookfile;
         
         [operationArray insertObject:myBlockOperation atIndex:i];
     }
-
+    
     NSOperationQueue *queue = [[NSOperationQueue alloc]init];
     
     [queue setMaxConcurrentOperationCount:wordArray.count];
@@ -156,7 +170,7 @@ NSString *bookfile;
     NSMutableString *resultString = [[NSMutableString alloc] init];
     for (NSString *key in [wordCountDic allKeys]) {
         NSNumber *currentNumber = [wordCountDic objectForKey:key];
-
+        
         
         if (currentNumber.intValue <= min.intValue) {
             minKey = key;
@@ -177,19 +191,13 @@ NSString *bookfile;
     [resultString appendFormat:@"min: %@ - %@, max: %@ - %@", minKey, min, maxKey, max];
     
     NSLog(@"min: %@: %@회, max: %@: %@회", minKey, min, maxKey, max);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"카운트 결과"
-                                                    message:resultString
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    [self showAlert:resultString];
 }
 
 
 
 - (NSUInteger)countOfSubstring:(NSString *)substring atContents:(NSString *)contents {
 
-    
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:substring options:NSRegularExpressionCaseInsensitive error:&error];
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:contents options:0 range:NSMakeRange(0, [contents length])];
