@@ -47,15 +47,52 @@
                                     <constraint firstAttribute="width" constant="190" id="luU-0d-oOb"/>
                                 </constraints>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wf-FW-sbn">
+                                <rect key="frame" x="221" y="296" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Lt-4L-Bvb"/>
+                                    <constraint firstAttribute="width" constant="61" id="OCy-wh-hEE"/>
+                                </constraints>
+                                <state key="normal" title="Count"/>
+                                <connections>
+                                    <action selector="countButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THy-Yo-pFa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="검색할 단어를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPd-Au-9di">
+                                <rect key="frame" x="57" y="296" width="163" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="V8L-Xt-d9I"/>
+                                    <constraint firstAttribute="width" constant="163" id="Xv4-7c-Gvi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii9-wy-LxC">
+                                <rect key="frame" x="46" y="348" width="162" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="1ZQ-6H-izm"/>
+                                    <constraint firstAttribute="height" constant="30" id="z2C-ro-VZw"/>
+                                </constraints>
+                                <state key="normal" title="Count from php list"/>
+                                <connections>
+                                    <action selector="listCountButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pia-VI-GeO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1wf-FW-sbn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="276" id="2uW-GS-Dcf"/>
                             <constraint firstItem="adE-Ob-Jqb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="2xN-kd-cC5"/>
+                            <constraint firstItem="Ii9-wy-LxC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="6qj-7q-xC1"/>
+                            <constraint firstItem="OPd-Au-9di" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="276" id="GWZ-0T-lBF"/>
                             <constraint firstItem="adE-Ob-Jqb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="158" id="K3P-oF-tyd"/>
                             <constraint firstItem="pHr-z5-j0b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="230" id="QSj-Nd-zTL"/>
+                            <constraint firstItem="Ii9-wy-LxC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="328" id="QaS-GM-hR9"/>
                             <constraint firstItem="pHr-z5-j0b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="SSi-pi-wGM"/>
+                            <constraint firstItem="OPd-Au-9di" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="VQe-sm-5sA"/>
                             <constraint firstItem="axF-vd-aY1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="kkt-Zk-kHS"/>
                             <constraint firstItem="axF-vd-aY1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="nKh-L3-lVi"/>
+                            <constraint firstItem="1wf-FW-sbn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="201" id="o2W-Os-piq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -65,6 +102,7 @@
                         <outlet property="buttonWidthConstraint" destination="qHl-cz-tkh" id="q0e-Ei-Hmk"/>
                         <outlet property="firstButton" destination="axF-vd-aY1" id="buD-C4-QRD"/>
                         <outlet property="progressBar" destination="pHr-z5-j0b" id="GEb-Rb-J3m"/>
+                        <outlet property="searchTextField" destination="OPd-Au-9di" id="5DL-s1-Ief"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

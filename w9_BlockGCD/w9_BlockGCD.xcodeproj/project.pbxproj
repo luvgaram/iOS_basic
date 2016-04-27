@@ -404,6 +404,7 @@
 				A864031E1CCDBD98004A3B27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A864031F1CCDBD98004A3B27 /* Build configuration list for PBXNativeTarget "w9_BlockGCDUITests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +413,7 @@
 				A86403211CCDBD98004A3B27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
