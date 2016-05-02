@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A852B4441CD6F08100E5A823 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A852B4431CD6F08100E5A823 /* main.m */; };
+		A852B4471CD6F08100E5A823 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A852B4461CD6F08100E5A823 /* AppDelegate.m */; };
+		A852B44A1CD6F08100E5A823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A852B4491CD6F08100E5A823 /* ViewController.m */; };
+		A852B44D1CD6F08100E5A823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A852B44B1CD6F08100E5A823 /* Main.storyboard */; };
+		A852B44F1CD6F08100E5A823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A852B44E1CD6F08100E5A823 /* Assets.xcassets */; };
+		A852B4521CD6F08100E5A823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A852B4501CD6F08100E5A823 /* LaunchScreen.storyboard */; };
+		A852B45D1CD6F08100E5A823 /* w10_multi_touchEventUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A852B45C1CD6F08100E5A823 /* w10_multi_touchEventUITests.m */; };
+		A852B4691CD6F0C100E5A823 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A852B4681CD6F0C100E5A823 /* MyView.m */; };
+		A852B46F1CD703B400E5A823 /* MyGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A852B46E1CD703B400E5A823 /* MyGestureRecognizer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A852B4591CD6F08100E5A823 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A852B4371CD6F08000E5A823 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A852B43E1CD6F08000E5A823;
+			remoteInfo = w10_multi_touchEvent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A852B43F1CD6F08100E5A823 /* w10_multi_touchEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w10_multi_touchEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A852B4431CD6F08100E5A823 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A852B4451CD6F08100E5A823 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A852B4461CD6F08100E5A823 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A852B4481CD6F08100E5A823 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A852B4491CD6F08100E5A823 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A852B44C1CD6F08100E5A823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A852B44E1CD6F08100E5A823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A852B4511CD6F08100E5A823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A852B4531CD6F08100E5A823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A852B4581CD6F08100E5A823 /* w10_multi_touchEventUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w10_multi_touchEventUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A852B45C1CD6F08100E5A823 /* w10_multi_touchEventUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w10_multi_touchEventUITests.m; sourceTree = "<group>"; };
+		A852B45E1CD6F08100E5A823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A852B4671CD6F0C100E5A823 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		A852B4681CD6F0C100E5A823 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		A852B46D1CD703B400E5A823 /* MyGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGestureRecognizer.h; sourceTree = "<group>"; };
+		A852B46E1CD703B400E5A823 /* MyGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGestureRecognizer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A852B43C1CD6F08000E5A823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A852B4551CD6F08100E5A823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A852B4361CD6F08000E5A823 = {
+			isa = PBXGroup;
+			children = (
+				A852B4411CD6F08100E5A823 /* w10_multi_touchEvent */,
+				A852B45B1CD6F08100E5A823 /* w10_multi_touchEventUITests */,
+				A852B4401CD6F08100E5A823 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A852B4401CD6F08100E5A823 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A852B43F1CD6F08100E5A823 /* w10_multi_touchEvent.app */,
+				A852B4581CD6F08100E5A823 /* w10_multi_touchEventUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A852B4411CD6F08100E5A823 /* w10_multi_touchEvent */ = {
+			isa = PBXGroup;
+			children = (
+				A852B4451CD6F08100E5A823 /* AppDelegate.h */,
+				A852B4461CD6F08100E5A823 /* AppDelegate.m */,
+				A852B4481CD6F08100E5A823 /* ViewController.h */,
+				A852B4491CD6F08100E5A823 /* ViewController.m */,
+				A852B44B1CD6F08100E5A823 /* Main.storyboard */,
+				A852B44E1CD6F08100E5A823 /* Assets.xcassets */,
+				A852B4501CD6F08100E5A823 /* LaunchScreen.storyboard */,
+				A852B4531CD6F08100E5A823 /* Info.plist */,
+				A852B4421CD6F08100E5A823 /* Supporting Files */,
+				A852B4671CD6F0C100E5A823 /* MyView.h */,
+				A852B4681CD6F0C100E5A823 /* MyView.m */,
+				A852B46D1CD703B400E5A823 /* MyGestureRecognizer.h */,
+				A852B46E1CD703B400E5A823 /* MyGestureRecognizer.m */,
+			);
+			path = w10_multi_touchEvent;
+			sourceTree = "<group>";
+		};
+		A852B4421CD6F08100E5A823 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A852B4431CD6F08100E5A823 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A852B45B1CD6F08100E5A823 /* w10_multi_touchEventUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A852B45C1CD6F08100E5A823 /* w10_multi_touchEventUITests.m */,
+				A852B45E1CD6F08100E5A823 /* Info.plist */,
+			);
+			path = w10_multi_touchEventUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A852B43E1CD6F08000E5A823 /* w10_multi_touchEvent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A852B4611CD6F08100E5A823 /* Build configuration list for PBXNativeTarget "w10_multi_touchEvent" */;
+			buildPhases = (
+				A852B43B1CD6F08000E5A823 /* Sources */,
+				A852B43C1CD6F08000E5A823 /* Frameworks */,
+				A852B43D1CD6F08000E5A823 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = w10_multi_touchEvent;
+			productName = w10_multi_touchEvent;
+			productReference = A852B43F1CD6F08100E5A823 /* w10_multi_touchEvent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A852B4571CD6F08100E5A823 /* w10_multi_touchEventUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A852B4641CD6F08100E5A823 /* Build configuration list for PBXNativeTarget "w10_multi_touchEventUITests" */;
+			buildPhases = (
+				A852B4541CD6F08100E5A823 /* Sources */,
+				A852B4551CD6F08100E5A823 /* Frameworks */,
+				A852B4561CD6F08100E5A823 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A852B45A1CD6F08100E5A823 /* PBXTargetDependency */,
+			);
+			name = w10_multi_touchEventUITests;
+			productName = w10_multi_touchEventUITests;
+			productReference = A852B4581CD6F08100E5A823 /* w10_multi_touchEventUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A852B4371CD6F08000E5A823 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jay Im";
+				TargetAttributes = {
+					A852B43E1CD6F08000E5A823 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					A852B4571CD6F08100E5A823 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A852B43E1CD6F08000E5A823;
+					};
+				};
+			};
+			buildConfigurationList = A852B43A1CD6F08000E5A823 /* Build configuration list for PBXProject "w10_multi_touchEvent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A852B4361CD6F08000E5A823;
+			productRefGroup = A852B4401CD6F08100E5A823 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A852B43E1CD6F08000E5A823 /* w10_multi_touchEvent */,
+				A852B4571CD6F08100E5A823 /* w10_multi_touchEventUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A852B43D1CD6F08000E5A823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A852B4521CD6F08100E5A823 /* LaunchScreen.storyboard in Resources */,
+				A852B44F1CD6F08100E5A823 /* Assets.xcassets in Resources */,
+				A852B44D1CD6F08100E5A823 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A852B4561CD6F08100E5A823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A852B43B1CD6F08000E5A823 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A852B4691CD6F0C100E5A823 /* MyView.m in Sources */,
+				A852B46F1CD703B400E5A823 /* MyGestureRecognizer.m in Sources */,
+				A852B44A1CD6F08100E5A823 /* ViewController.m in Sources */,
+				A852B4471CD6F08100E5A823 /* AppDelegate.m in Sources */,
+				A852B4441CD6F08100E5A823 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A852B4541CD6F08100E5A823 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A852B45D1CD6F08100E5A823 /* w10_multi_touchEventUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A852B45A1CD6F08100E5A823 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A852B43E1CD6F08000E5A823 /* w10_multi_touchEvent */;
+			targetProxy = A852B4591CD6F08100E5A823 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A852B44B1CD6F08100E5A823 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A852B44C1CD6F08100E5A823 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A852B4501CD6F08100E5A823 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A852B4511CD6F08100E5A823 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A852B45F1CD6F08100E5A823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A852B4601CD6F08100E5A823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A852B4621CD6F08100E5A823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = w10_multi_touchEvent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w10-multi-touchEvent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A852B4631CD6F08100E5A823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = w10_multi_touchEvent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w10-multi-touchEvent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A852B4651CD6F08100E5A823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = w10_multi_touchEventUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w10-multi-touchEventUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = w10_multi_touchEvent;
+			};
+			name = Debug;
+		};
+		A852B4661CD6F08100E5A823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = w10_multi_touchEventUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.nhnnext.w10-multi-touchEventUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = w10_multi_touchEvent;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A852B43A1CD6F08000E5A823 /* Build configuration list for PBXProject "w10_multi_touchEvent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A852B45F1CD6F08100E5A823 /* Debug */,
+				A852B4601CD6F08100E5A823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A852B4611CD6F08100E5A823 /* Build configuration list for PBXNativeTarget "w10_multi_touchEvent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A852B4621CD6F08100E5A823 /* Debug */,
+				A852B4631CD6F08100E5A823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A852B4641CD6F08100E5A823 /* Build configuration list for PBXNativeTarget "w10_multi_touchEventUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A852B4651CD6F08100E5A823 /* Debug */,
+				A852B4661CD6F08100E5A823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A852B4371CD6F08000E5A823 /* Project object */;
+}
