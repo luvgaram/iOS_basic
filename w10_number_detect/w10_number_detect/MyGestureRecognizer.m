@@ -46,10 +46,8 @@ NSNumber *four;
     
     CGPoint prePoint = [[touchedPoints objectAtIndex:[touchedPoints count] - 1] CGPointValue];
     
-//    NSLog(@"절대값: %f", fabs(prePoint.x - movePoint.x) + fabs(prePoint.y - movePoint.y));
-    
     // 일정 거리 이상만 move로 넣기
-    if (fabs(prePoint.x - movePoint.x) + fabs(prePoint.y - movePoint.y) > 20) {
+    if ([self measureDistanceFirst:prePoint withSecond:movePoint] > 30) {
         [touchedPoints addObject:[NSValue valueWithCGPoint:movePoint]];
     }
 }
@@ -59,27 +57,25 @@ NSNumber *four;
     CGPoint endPoint = [touch locationInView:self.view];
     [touchedPoints addObject:[NSValue valueWithCGPoint:endPoint]];
     
-    [self checkGesture];
+    _result = [self checkGesture];
     
+//    if (_result == -1) self.state = UIGestureRecognizerStateFailed;
     self.state = UIGestureRecognizerStateEnded;
 }
 
-- (void)checkGesture {
+- (int)checkGesture {
     NSUInteger touchCount = [touchedPoints count];
     NSLog(@"touchCount: %d", touchCount);
 
-    if (touchCount < 1) return;
+    if (touchCount < 1) return -1;
     [self recordDirections:touchCount];
     
     directionCount = [directions count];
     NSLog(@"directionCount: %d", directionCount);
-    [self checkNumberWithDirections];
-    
+    return [self checkNumberWithDirections];
 }
 
 - (int)checkNumberWithDirections {
-    int result = 0;
-    
     // 획이 1개면 1로 처리
     if (directionCount == 1) {
         NSLog(@"result: 1");
@@ -87,40 +83,67 @@ NSNumber *four;
     }
     
     if (![[directions objectAtIndex:0] isEqualToNumber:one]) {
-        if ([self checkOne]) {
+        if ([self checkOne] == 1) {
             NSLog(@"result: 1");
             return 1;
+        } else if ([self checkZeroNSix] == 0) {
+            NSLog(@"result: 0");
+            return 0;
+        } else if ([self checkZeroNSix] == 6) {
+            NSLog(@"result: 6");
+            return 6;
         } else {
             NSLog(@"no gesture!!!");
+            return -1;
         }
     } else {
-        if ([self checkThree]) {
-            NSLog(@"result %d:", [self checkThree]);
-            return [self checkThree];
+        if ([self checkTwoNThree]) {
+            NSLog(@"result %d:", [self checkTwoNThree]);
+            return [self checkTwoNThree];
         }
     }
-    
-    NSLog(@"result: %d", result);
-    return result;
+    return -1;
 }
 
-- (int)checkThree {
-    NSLog(@"check 3 begin");
-    int result = 0;
+- (int)checkZeroNSix {
+    NSLog(@"check 0 begin");
     
-    if (directionCount < 5 || directionCount > 8) return 0;
+    CGPoint startPoint = [[touchedPoints objectAtIndex:0] CGPointValue];
+    CGPoint endPoint = [[touchedPoints objectAtIndex:[touchedPoints count] - 1] CGPointValue];
+    
+    if ([[directions objectAtIndex:0] isEqualToNumber:three] &&
+        [[directions objectAtIndex:1] isEqualToNumber:two] &&
+        [[directions objectAtIndex:2] isEqualToNumber:one] &&
+        [[directions objectAtIndex:3] isEqualToNumber:four]) {
+        
+        if ([self measureDistanceFirst:startPoint withSecond:endPoint] < 50) {
+            return 0;
+        }
+        
+        if ([[directions objectAtIndex:directionCount - 1] isEqualToNumber:three] ||
+            [[directions objectAtIndex:directionCount - 1] isEqualToNumber:four])
+            return 6;
+    }
+    
+    return -1;
+}
+
+- (int)checkTwoNThree {
+    NSLog(@"check 3 begin");
+    
+    if (directionCount < 5) return 0;
     
     if (![[directions objectAtIndex:0] isEqualToNumber:one] ||
         ![[directions objectAtIndex:1] isEqualToNumber:two] ||
         ![[directions objectAtIndex:2] isEqualToNumber:three]) {
-        NSLog(@"0");
-        return 0;
+        NSLog(@"-1");
+        return -1;
     }
     
     if ([[directions objectAtIndex:3] isEqualToNumber:one] || [[directions objectAtIndex:3] isEqualToNumber:four]) {
-        NSLog(@"0");
-        return 0;
-    } else if ([[directions objectAtIndex:directionCount - 1] isEqualToNumber:three] || [[directions objectAtIndex:directionCount - 1] isEqualToNumber:three]) {
+        NSLog(@"-1");
+        return -1;
+    } else if ([[directions objectAtIndex:directionCount - 1] isEqualToNumber:three] || [[directions objectAtIndex:directionCount - 1] isEqualToNumber:four]) {
         NSLog(@"3");
         return 3;
     } else {
@@ -129,19 +152,18 @@ NSNumber *four;
     }
 }
 
-- (BOOL)checkOne {
+- (int)checkOne {
     NSLog(@"check 1 begin");
     
     for (int i = 1; i < directionCount; i++) {
         NSLog(@"now direction [%d]: %@", i, [directions objectAtIndex:i]);
         
-        if ([[directions objectAtIndex:i] isEqualToNumber:one]) {
+        if ([[directions objectAtIndex:i] isEqualToNumber:one] || directionCount > 3) {
             NSLog(@"no gesture!!!");
-            return NO;
+            return -1;
         }
     }
-    
-    return YES;
+    return 1;
 }
 
 - (void)recordDirections:(NSUInteger)touchCount {
@@ -164,9 +186,6 @@ NSNumber *four;
 }
 
 - (void)addDirectionIfChanged:(NSNumber*)curDirection {
-//    if (directionCount > 1) return;
-    
-//    NSLog(@"direction is %@", curDirection);
     if (![curDirection isEqualToNumber:[directions objectAtIndex:[directions count] - 1]]) {
         [directions addObject:curDirection];
         NSLog(@"direction changed to %@", curDirection);
@@ -193,6 +212,10 @@ NSNumber *four;
 - (Boolean)checkYPositionFirst:(CGPoint)first with:(CGPoint)second {
     if (first.y < second.y) return YES;
     return NO;
+}
+
+- (double)measureDistanceFirst:(CGPoint)first withSecond:(CGPoint) second {
+    return sqrt((first.x - second.x) * (first.x - second.x) + (first.y - second.y) * (first.y - second.y));
 }
 
 @end

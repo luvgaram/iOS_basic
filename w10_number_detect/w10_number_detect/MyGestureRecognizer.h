@@ -10,4 +10,6 @@
 
 @interface MyGestureRecognizer : UIGestureRecognizer
 
+@property int result;
+
 @end
