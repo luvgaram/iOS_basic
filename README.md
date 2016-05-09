@@ -26,3 +26,4 @@
 | week 10-2 | 2016.5.4 13:00 | [DrawNumber](https://github.com/luvgaram/iOS_basic/tree/master/w10_number_detect) |
 | ㄴ | 2016.5.4 13:00 | ㄴ #1 detect 1, 2, 3 
 | ㄴ | 2016.5.4 14:00 | ㄴ #2 detect 0, 6 |
+| week 11-1 | 2016.5.9 14:10 | [Database](https://github.com/luvgaram/iOS_basic/tree/master/w11_database) |
