@@ -37,8 +37,6 @@ NSMutableArray *dataArray;
     int colomnCount;
     char *zErrMsg = 0;
     
-
-    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"top25" ofType:@"db"];
     NSLog(@"filePath: %@", filePath);
     
@@ -86,10 +84,7 @@ NSMutableArray *dataArray;
             [dataArray addObject:newMusic];
             
             index += 4;
-            
         }
-        
-        NSLog(@"dataArray: %@", dataArray);
     }
     
     sqlite3_close(db);
@@ -100,29 +95,12 @@ NSMutableArray *dataArray;
     // Dispose of any resources that can be recreated.
 }
 
-//#pragma mark - tableViewDetail
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    EJData *data;
-//    
-//    if (hasHeader) {
-//        NSArray *sortedKeys = [self shortedKeys];
-//        
-//        NSLog(@"%@", sortedKeys);
-//        
-//        NSString *key = sortedKeys[indexPath.section];
-//        NSArray *dataArray = [self.dataModel.itemDictionary objectForKey:key];
-//        data = [dataArray objectAtIndex:(int)indexPath.row];
-//    } else {
-//        data = self.dataModel.itemArray[indexPath.row];
-//    }
-//    EJDetailViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
-//    [controller setDetailItem:data];
-//    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-//    controller.navigationItem.leftItemsSupplementBackButton = YES;
-//    [self.navigationController pushViewController:controller animated:YES];
-//    
-//}
+#pragma mark - tableViewDetail
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NXMusic *target = [dataArray objectAtIndex:indexPath.row];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:target.image]];
+}
 
 #pragma mark - Table view data source
 
