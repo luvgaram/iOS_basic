@@ -31,4 +31,4 @@
 | week 11-2 | 2016.5.11 12:50 | [Core Data](https://github.com/luvgaram/iOS_basic/tree/master/w11_CoreData) |
 | ㄴ | 2016.5.11 14:20 | ㄴ #2 plus mission: enable button (bug: table reloadData dosen't work) |
 | ㄴ | 2016.5.11 16:00 | ㄴ #3 table reloadData works well |
-| ㄴ | 2016.5.11 16:00 | ㄴ #4 plubs mission: disable button when id is duplicated |
+| ㄴ | 2016.5.11 17:30 | ㄴ #4 plus mission: disable button when id is duplicated |
