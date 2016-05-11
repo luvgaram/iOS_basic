@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *gradeTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *genderSwitch;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 
 @end

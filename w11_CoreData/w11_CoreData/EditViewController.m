@@ -12,12 +12,50 @@
 @implementation EditViewController
 
 EJDataManager *ejDataManager;
+BOOL isIdInserted;
+BOOL isNameInserted;
+BOOL isGradeInserted;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     ejDataManager = [EJDataManager sharedInstance];
+    
+    isIdInserted = NO;
+    isNameInserted = NO;
+    isGradeInserted = NO;
+    self.saveButton.enabled = NO;
 }
 
+- (IBAction)idTextChanged:(id)sender {
+    if (self.idTextField.text.length > 0) isIdInserted = YES;
+    else isIdInserted = NO;
+    
+    [self swichSaveButtonStatus];
+}
+
+- (IBAction)nameTextChanged:(id)sender {
+    if (self.nameTextField.text.length > 0) isNameInserted = YES;
+    else isNameInserted = NO;
+    
+    [self swichSaveButtonStatus];
+}
+
+- (void)swichSaveButtonStatus {
+    if (isIdInserted && isNameInserted && isGradeInserted) self.saveButton.enabled = YES;
+    else self.saveButton.enabled = NO;
+}
+
+- (IBAction)gradeTextChanged:(id)sender {
+    
+    NSLog(@"length: %d", self.gradeTextField.text.length);
+    if (self.gradeTextField.text.length > 0) {
+        isGradeInserted = YES;
+    } else {
+        isGradeInserted = NO;
+    }
+    
+    if (isIdInserted && isNameInserted && isGradeInserted) self.saveButton.enabled = YES;
+}
 
 - (IBAction)SaveButtonClicked:(id)sender {
     NSString *studentId = self.idTextField.text;
@@ -25,8 +63,16 @@ EJDataManager *ejDataManager;
     BOOL isMale = [self.genderSwitch isOn];
     NSUInteger grade = [self.gradeTextField.text integerValue];
     
+    self.idTextField.text = @"";
+    self.nameTextField.text = @"";
+    self.gradeTextField.text = @"";
+    
     [ejDataManager addStudentWithId:studentId name:name gender:isMale grade:grade];
     [ejDataManager controllerWillChangeContent];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

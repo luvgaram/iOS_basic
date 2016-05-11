@@ -23,7 +23,6 @@ EJDataManager *dataManager;
 }
 
 - (void)receivedNotification:(NSNotification*)notification {
-    
     NSLog(@"received notification");
     [self.tableView reloadData];
 }
@@ -33,9 +32,9 @@ EJDataManager *dataManager;
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - Table View
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return [[dataManager.fetchedResultsController sections] count];
     return 1;
 }
 
@@ -52,8 +51,7 @@ EJDataManager *dataManager;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,6 +73,9 @@ EJDataManager *dataManager;
     cell.cellId.text = [[object valueForKey:@"id"] description];
     cell.cellName.text = [[object valueForKey:@"name"] description];
     cell.cellGrade.text = [[object valueForKey:@"grade"] description];
+    
+    if ([[[object valueForKey:@"gender"] description] isEqualToString:@"1"]) cell.cellGender.text = @"M";
+    else cell.cellGender.text = @"F";
 }
 
 @end

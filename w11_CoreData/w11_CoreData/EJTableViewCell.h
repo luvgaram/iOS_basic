@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *cellId;
 @property (weak, nonatomic) IBOutlet UILabel *cellName;
 @property (weak, nonatomic) IBOutlet UILabel *cellGrade;
+@property (weak, nonatomic) IBOutlet UILabel *cellGender;
 
 @end

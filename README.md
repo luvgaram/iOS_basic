@@ -29,3 +29,4 @@
 | week 11-1 | 2016.5.9 14:10 | [Database](https://github.com/luvgaram/iOS_basic/tree/master/w11_database) |
 | ㄴ | 2016.5.9 14:15 | ㄴ #2 plus mission: open url in Safari |
 | week 11-2 | 2016.5.11 12:50 | [Core Data](https://github.com/luvgaram/iOS_basic/tree/master/w11_CoreData) |
+| ㄴ | 2016.5.11 14:20 | ㄴ #2 plus mission: enable button (bug: table reloadData dosen't work) |

@@ -74,6 +74,7 @@ static id sharedInsctance = nil;
 
 - (void)controllerWillChangeContent {
     NSLog(@"controllerWillChangeContent");
+    
     NSNotification *notification = [NSNotification notificationWithName:@"addStudent" object:self];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
