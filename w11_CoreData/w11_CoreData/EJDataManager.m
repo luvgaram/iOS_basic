@@ -37,6 +37,23 @@ static id sharedInsctance = nil;
     }
 }
 
+- (NSUInteger)numbersOfStudents {
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+    return [sectionInfo numberOfObjects];
+}
+
+- (BOOL)isInsertedId:(NSString *) targetId {
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+    
+    for (NSManagedObject *object in [sectionInfo objects]) {
+        NSString *id = [[object valueForKey:@"id"] description];
+        NSLog(@"id: %@", id);
+        
+        if ([id isEqualToString:targetId]) return YES;
+    }
+    return NO;
+}
+
 #pragma mark - Fetched results controller
 
 - (NSFetchedResultsController *)fetchedResultsController {

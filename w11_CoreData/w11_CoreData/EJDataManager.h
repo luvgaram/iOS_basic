@@ -16,6 +16,7 @@
 
 + (id)sharedInstance;
 - (void)addStudentWithId:(NSString *)studentId name:(NSString *)name gender:(BOOL)isMale grade:(NSUInteger)grade;
-- (void)controllerWillChangeContent;
+- (NSUInteger)numbersOfStudents;
+- (BOOL)isInsertedId:(NSString *) targetId;
 
 @end

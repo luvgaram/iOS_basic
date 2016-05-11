@@ -27,7 +27,9 @@ BOOL isGradeInserted;
 }
 
 - (IBAction)idTextChanged:(id)sender {
-    if (self.idTextField.text.length > 0) isIdInserted = YES;
+    NSString *targetID = self.idTextField.text;
+    
+    if (targetID.length > 0 && ![ejDataManager isInsertedId:targetID]) isIdInserted = YES;
     else isIdInserted = NO;
     
     [self swichSaveButtonStatus];
