@@ -10,6 +10,11 @@
 #import "EJDataManager.h"
 #import "EJTableViewCell.h"
 
+@interface StudentViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@end
+
 @implementation StudentViewController
 
 EJDataManager *dataManager;
@@ -19,12 +24,17 @@ EJDataManager *dataManager;
     
     dataManager = [EJDataManager sharedInstance];
     
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotification:) name:@"addStudent" object:nil];
 }
 
 - (void)receivedNotification:(NSNotification*)notification {
     NSLog(@"received notification");
+    
     [self.tableView reloadData];
+    [self.tableView setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +50,7 @@ EJDataManager *dataManager;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [dataManager.fetchedResultsController sections][section];
+    NSLog(@"numberOfRowsInSection, %d", [sectionInfo numberOfObjects]);
     return [sectionInfo numberOfObjects];
 }
 

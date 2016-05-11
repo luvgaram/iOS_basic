@@ -68,7 +68,7 @@ BOOL isGradeInserted;
     self.gradeTextField.text = @"";
     
     [ejDataManager addStudentWithId:studentId name:name gender:isMale grade:grade];
-    [ejDataManager controllerWillChangeContent];
+//    [ejDataManager controllerWillChangeContent];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

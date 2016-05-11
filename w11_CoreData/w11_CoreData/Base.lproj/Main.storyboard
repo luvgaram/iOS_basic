@@ -231,10 +231,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="MPP-1D-L2H" id="UGN-88-OKU"/>
-                                    <outlet property="delegate" destination="MPP-1D-L2H" id="pP6-qf-nMR"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,7 +243,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Student" id="tHR-0a-xzV"/>
                     <connections>
-                        <outlet property="tableView" destination="Frw-Hk-aZ6" id="GZa-VO-7OB"/>
+                        <outlet property="tableView" destination="Frw-Hk-aZ6" id="lSV-zP-nGe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4e-ku-zO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
