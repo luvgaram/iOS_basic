@@ -32,3 +32,4 @@
 | ㄴ | 2016.5.11 14:20 | ㄴ #2 plus mission: enable button (bug: table reloadData dosen't work) |
 | ㄴ | 2016.5.11 16:00 | ㄴ #3 table reloadData works well |
 | ㄴ | 2016.5.11 16:00 | ㄴ #4 plubs mission: disable button when id is duplicated |
+| week 12-1 | 2016.5.16 13:05 | [Swift - PlayGround](https://github.com/luvgaram/iOS_basic/tree/master/w12_PlayGround) |
