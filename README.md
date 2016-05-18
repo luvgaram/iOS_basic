@@ -33,3 +33,4 @@
 | ㄴ | 2016.5.11 16:00 | ㄴ #3 table reloadData works well |
 | ㄴ | 2016.5.11 17:30 | ㄴ #4 plubs mission: disable button when id is duplicated |
 | week 12-1 | 2016.5.16 13:05 | [Swift - PlayGround](https://github.com/luvgaram/iOS_basic/tree/master/w12_PlayGround) |
+| ㄴ | 2016.5.18 12:00 | ㄴ #2 WED: Make Pascal Triangle |
